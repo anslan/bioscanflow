@@ -50,7 +50,7 @@ The samples were registered in
 and through the PlutoF platform, 
 the data was :ref:`automatically submitted <publishing_samples_to_ENA>` to **European Nucleotide Archive** (ENA). 
 
-Raw sequences and BioSamples are available in ENA, under the project accession number PRJEB108475.
+Raw sequences and BioSamples are available in ENA, under the project accession number **PRJEB108475**.
 
 __________________________________________________
 
