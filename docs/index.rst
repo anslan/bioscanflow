@@ -135,7 +135,8 @@ Contents
    4amplicon_lib
    6bioinfo
    7interpret
-   8additional_resources
+   8data_sharing
+   9additional_resources
 
 ____________________________________________________
 
