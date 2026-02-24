@@ -242,8 +242,14 @@ can be updated later by re-publishing.
   that is, they are not linked to a BioProject. 
   **Samples will be linked to a BioProject when the raw sequence data is associated 
   with the samples.**
-  See 'How to Submit Raw Reads' `tutorial here <https://ena-docs.readthedocs.io/en/latest/submit/reads.html>`_.
+  See 'How to Submit Raw Reads' :ref:`here <upload_raw_sequence_data_to_ena>`
 
+
+Further data sharing
+--------------------
+
+See :ref:`Data sharing section <data_sharing>` for instructions on how to submit raw sequencing data to ENA,
+upload representative sequences of ASVs/OTUs to `PlutoF <https://plutof.ut.ee/en>`_ and `GBIF <https://www.gbif.org/>`_.
 
 
 ___________________________________________________
