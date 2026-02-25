@@ -29,12 +29,14 @@
 
 |logo_BGE_alpha|
 
+.. _data_sharing:
 
 Data sharing
 ************
 
-Data sharing ... 
-
+This section describes how to submit samples and raw sequencing data 
+to the `European Nucleotide Archive (ENA) <https://www.ebi.ac.uk/ena/browser/home>`_,
+and upload representative sequences of ASVs/OTUs to `PlutoF <https://plutof.ut.ee/en>`_ and `GBIF <https://www.gbif.org/>`_.
 
 Uploading sample records to ENA
 ===============================
@@ -90,6 +92,8 @@ can be updated later by re-publishing.
 
 ___________________________________________________
 
+.. _upload_raw_sequence_data_to_ena:
+
 Uploading raw sequence data to ENA
 ==================================
 
@@ -144,6 +148,7 @@ After the study (BioProject) and samples (BioSamples) are registered, the sequen
 
   Samples were registered in ENA through the PlutoF platform.
   So, we have BioSample codes for the samples that are now associated with the sequencing data.
+  See here :ref:`how to export the sample IDs (Material Sample IDs) and the BioSample IDs <export_sample_IDs>` from PlutoF.
 
 
 **Steps to submit sequencing data:**
@@ -332,15 +337,19 @@ __________________________________________________
 Uploading ASV/OTU representative sequences to PlutoF
 ====================================================
 
-Representative sequences of OTUs/ASVs per sample can be uploaded to `PlutoF <https://plutof.ut.ee/en>`_ using the **import module**. 
+Representative sequences of OTUs/ASVs and their taxonomy (and other information, such as read counts) per sample 
+can be uploaded to `PlutoF <https://plutof.ut.ee/en>`_. 
+Then each ASV/OTU is tied to a specific sample (Material Sample ID)
+that connects the sequence data to where and when it was collected, which enhances data reuse and downstream data sharing.
+
 
 Steps to upload representative sequences:
 
 1. :ref:`Download the template file for the import <download_sequence_template_file>`.
    
-2. Fill in the template file.
+2. :ref:`Fill in the template file <fill_in_sequence_template>`.
    
-3. Upload the template file.
+3. :ref:`Upload the template file <upload_sequence_template_file>`.
 
 __________________________________________________
 
@@ -350,17 +359,122 @@ __________________________________________________
 **1. Download the template file for the import**
 
 A template file for the **representative sequence import** can be created and downloaded via 
-Main menu --> Import --> Generate template by selecting the Model (Sequence) and Form name (Sequence: HTS representative). 
+**Import panel** --> Generate template by selecting the **Module "Sequence"** and **Form name "Sequence: HTS representative"**. 
+
+Select required filelds (minimum **Project**, **Type**, and **ID**)
 
 .. figure:: _static/plutof/sequence_template.png
   :width: 690
   :align: center
 
+|
+
+.. _fill_in_sequence_template:
+
+**2. Fill in the template file.**
+
+Fill in the template file with the representative sequences of ASVs/OTUs per sample.
+
++--------------------------------------+----------------------------------------+
+| Field                                | Description                            |
++======================================+========================================+
+| Linked to.Project                    | project name in PlutoF                 |
++--------------------------------------+----------------------------------------+
+| Linked to.Type                       | here the type is **materialsample**    |
++--------------------------------------+----------------------------------------+
+| Linked to.ID                         | Material Sample ID                     |
++--------------------------------------+----------------------------------------+
+| Sequence ID                          | Your ASV/OTU Sequence ID               |
++--------------------------------------+----------------------------------------+
+| Sequence                             | Your ASV/OTU Sequence                  |
++--------------------------------------+----------------------------------------+
+| Read count.Value                     | Read count of the ASV/OTU              |
++--------------------------------------+----------------------------------------+
+| Sampling event.Sampling area.Country | Country where the sample was collected |
++--------------------------------------+----------------------------------------+
+| Determination.Taxon name             | Assigned taxonomy of the ASV/OTU       |
++--------------------------------------+----------------------------------------+
+
+*Click on the image below to enlarge the example of a filled sequence template (for one sample).*
+
+.. figure:: _static/plutof/filled_sequence_template.png
+  :width: 690
+  :align: center
+
+__________________________________________________
+
+.. _upload_sequence_template_file:
+
+**3. Upload the template file**
+
+Once the template file is filled, it can be uploaded to PlutoF via the **Import panel**.
+
+**Import panel** --> **New** (new import process)
 
 
-INCOMPLETE ...
+.. figure:: _static/plutof/import_new.png
+  :width: 690
+  :align: center
+
+|
+
+**Upload** the filled template file, 
+
+- specify **Module** ``Sequence``
+  
+- **Form name** ``Sequence: HTS representative``
+  
+- **Project** ``Your project name``
+  
+- **Check the box** for "Use source record's area and event if event columns are empty"
+  
+- **Match project sampling areas** 
+  
+- --> **Save and start**
+
+.. figure:: _static/plutof/save_and_start.png
+  :width: 690
+  :align: center
+
+.. note::
+
+  .. figure:: _static/plutof/error_parsing_source.png
+    :width: 400
+    :align: center
+
+  When this **ERROR** message is displayed, save your CSV file as **CSV UTF-8**. 
+  In Excel, select **File** --> **Save As** --> **CSV (UTF-8)**. Try the file upload again.
+
+| 
+
+After clicking the **Save and start**  button, the interactive import process will begin and guide the user through the procedure.
+You will be notified if any **errors** occur during the import process.
+
+The likely case is you need to fix the **synonyms**. This can be done interactively (see below image). When edited,
+then press **Save and continue** to proceed with the import process.
+
+.. figure:: _static/plutof/fix_synonyms.png
+  :width: 500
+  :align: center
+
+| 
+
+When the import is complete, you may press the **Back** button. 
+
+.. figure:: _static/plutof/import_complete.png
+  :width: 700
+  :align: center
+
+| 
+
+.. admonition:: DONE
+  
+  The sequences are accosiated with the sample(s).
 
 
+.. figure:: _static/plutof/related_records.png
+  :width: 700
+  :align: center
 
 
 ____________________________________________________
