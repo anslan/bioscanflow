@@ -242,8 +242,92 @@ can be updated later by re-publishing.
   that is, they are not linked to a BioProject. 
   **Samples will be linked to a BioProject when the raw sequence data is associated 
   with the samples.**
-  See 'How to Submit Raw Reads' `tutorial here <https://ena-docs.readthedocs.io/en/latest/submit/reads.html>`_.
+  See 'How to Submit Raw Reads' :ref:`here <upload_raw_sequence_data_to_ena>`
 
+__________________________________________________
+
+.. _export_sample_IDs:
+
+Bulk download of the samples with ENA ID (BioSample IDs) for linking those with raw sequence data
+-------------------------------------------------------------------------------------------------
+
+For submitting raw sequence data to ENA, the files need to be linked to the samples with ENA ID (BioSample IDs).
+
+When the samples were uploaded to ENA through the PlutoF platform, the BioSample IDs are stored in PlutoF and can be downloaded in bulk
+to a CSV file.
+
+Steps to bulk download the samples with ENA ID (BioSample IDs):
+
+1. Go to the `PlutoF workbench <https://plutof.ut.ee/en>`_.
+2. Search for the project.
+3. Click on the "Material Samples" tab.
+4. Click on the "Send all results to Clipboard" button.
+
+.. figure:: _static/plutof/send_to_clipboard.png
+  :width: 650
+  :align: center
+
+| 
+
+5. Go to **Clipboard & Export panel** --> and click on "Material Samples".
+
+.. figure:: _static/plutof/Clipboard.png
+  :width: 650
+  :align: center
+
+| 
+
+6. Select all samples (or a subset of samples) and click on the "Export" button.
+
+.. figure:: _static/plutof/export.png
+  :width: 650
+  :align: center
+
+| 
+
+7. Select the "CSV" format, are required fields. 
+   Be sure to select **Material Sample ID** and "ENA ID" (this is BioSample ID), and click on the **Export** button.
+
+.. figure:: _static/plutof/export2.png
+  :width: 650
+  :align: center
+
+| 
+
+8. If you export many samples, then this may take a while. You will receive an email when the export is complete.
+
+.. figure:: _static/plutof/export3.png
+  :width: 350
+  :align: center
+
+|
+
+9. When ready, the file can be downloaded from the **File Repository panel**.
+
+.. figure:: _static/plutof/download_csv.png
+  :width: 650
+  :align: center
+
+|
+
+Here, we selected to export only **Material Sample ID** and **ENA ID**, so
+the exported CSV looks like this:
+
+.. figure:: _static/plutof/downloaded_csv.png
+  :width: 300
+  :align: center
+
+|
+
+**These are the sample IDs (Material Sample IDs) and the BioSample IDs (ENA IDs) that can be used to link the raw sequence data to the samples (see below).**
+
+__________________________________________________
+
+Further data sharing
+--------------------
+
+See :ref:`Data sharing section <data_sharing>` for instructions on how to submit raw sequencing data to ENA,
+upload representative sequences of ASVs/OTUs to `PlutoF <https://plutof.ut.ee/en>`_ and `GBIF <https://www.gbif.org/>`_.
 
 
 ___________________________________________________

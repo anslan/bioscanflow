@@ -108,10 +108,11 @@ ____________________________________________________
 .. toctree::
    :maxdepth: 1
 
+   1plutof
    1sampling_water
    1sampling_soil
    1sampling_malaise
-   1plutof
+   
 
 ____________________________________________________
 
