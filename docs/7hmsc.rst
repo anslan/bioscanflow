@@ -38,7 +38,7 @@ a model-based approach for analyzing community
 ecological data (`Ovaskainen et al.2017 <https://doi.org/10.1111/ele.12757>`_).
 
 
-The **obligatory data** for HMSC-analyses includes a matrix of **species occurrences or abundances** and a 
+The **input data** for HMSC-analyses includes a matrix of **species occurrences or abundances** and a 
 matrix of **environmental covariates** (sampling units as **rows**). Optionally additional input data include species 
 **traits** and **phylogeny**, and information about the spatiotemporal context of the 
 sampling design. HMSC yields inference both at species and community levels. 

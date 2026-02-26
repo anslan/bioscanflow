@@ -36,10 +36,10 @@ Examine metabarcoding outputs
 .. toctree::
    :maxdepth: 1
 
-   7interpret_outputs
-   7interpret_EBVs
-   7interpret_VALOTUID
-   7interpret_hmsc
+   7outputs
+   7EBVs
+   7VALOTUID
+   7hmsc
 
 
 ____________________________________________________
