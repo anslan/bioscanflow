@@ -22,7 +22,7 @@ copyright = '2026, Sten Anslan, Laura Najera-Cortazar, Marius Eisele, Yurena Arj
 author = 'Sten Anslan, Laura Najera-Cortazar, Marius Eisele, Yurena Arjona Fariña'
 
 # The full version, including alpha/beta/rc tags
-version = ''
+version = 'v1.0'
 release = version
 
 # -- General configuration ---------------------------------------------------
