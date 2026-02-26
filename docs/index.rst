@@ -134,7 +134,7 @@ Contents
    3DNA_extraction
    4amplicon_lib
    6bioinfo
-   7interpret
+   7examine_outputs
    8data_sharing
    9additional_resources
 
