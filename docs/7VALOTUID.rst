@@ -22,8 +22,8 @@
 .. role:: red
 
 
-VAL_OTU_ID: eDNA taxonomy validation
-************************************
+eDNA taxonomy validation (VAL_OTU_ID)
+*************************************
 
 VAL_OTU_ID is a post-assignment validation pipeline for eDNA metabarcoding taxonomy.
 It does not assign taxonomy itself, but checks, validates, and corrects taxonomic 
