@@ -31,12 +31,24 @@
 
 .. _data_sharing:
 
-Data sharing
-************
+FAIR publication of eDNA results
+********************************
 
-This section describes how to submit samples and raw sequencing data 
-to the `European Nucleotide Archive (ENA) <https://www.ebi.ac.uk/ena/browser/home>`_,
-and upload representative sequences of ASVs/OTUs to `PlutoF <https://plutof.ut.ee/en>`_ and `GBIF <https://www.gbif.org/>`_.
+A sequence (and/or raw sequence data) with coordinates and a timestamp is a 
+**valuable biodiversity occurrence** that can be useful beyond its original purpose. 
+To realize this potential, DNA-derived data must be discoverable through biodiversity data platforms
+(see more from `Abarenkov et al., 2025 <https://doi.org/10.35035/doc-vf1a-nr22>`_). 
+
+**FAIR (Findable, Accessible, Interoperable, and Reusable)** publication of eDNA results
+can be achieved by depositing samples (with metadata) and sequencing data in public repositories 
+such as `European Nucleotide Archive (ENA) <https://www.ebi.ac.uk/ena/browser/home>`_, 
+`PlutoF <https://plutof.ut.ee/en>`_ and 
+`GBIF <https://www.gbif.org/>`_. 
+This section describes the steps for publishing DNA-derived data in these repositories.
+
+__________________________________________________
+
+.. _uploading_sample_records_to_ena:
 
 Uploading sample records to ENA
 ===============================
@@ -44,7 +56,7 @@ Uploading sample records to ENA
 `ENA (European Nucleotide Archive) <https://www.ebi.ac.uk/ena/browser/home>`_ 
 is an internationally recognized public repository for nucleotide 
 sequence data and associated sample metadata, 
-ensuring your data is **findable, accessible, and reusable**.
+ensuring your data is **FAIR**.
 
 If the data is already registered in `PlutoF <https://plutof.ut.ee/en>`_ , it can be uploaded to ENA using the **Publishing Lab** in PlutoF
 (see section :ref:`registering_samples_in_plutof`).
@@ -61,11 +73,11 @@ to the ENA database.
 The PlutoF platform acts as a broker for ENA, 
 utilising its programmatic Webin submission 
 service for sample data submission. 
-The resulting ENA and BioSamples identifiers 
+The resulting BioSamples (ENA IDs) identifiers 
 are stored in PlutoF alongside the original sample records.
 
-Publishing is project-based: all samples within a 
-selected study are submitted together, and the dataset 
+All samples within a 
+selected study (BioProject) can be submitted together, and the dataset 
 can be updated later by re-publishing.
 
 .. figure:: _static/plutof/to_ENA.png
@@ -334,12 +346,14 @@ Even when the Study is public, it **may take few days** for the sequences to be 
 __________________________________________________
 
 
-Uploading ASV/OTU representative sequences to PlutoF
-====================================================
+.. _upload_sequences_to_plutof:
 
-Representative sequences of OTUs/ASVs and their taxonomy (and other information, such as read counts) per sample 
+Uploading representative sequences of metabarcoding features to PlutoF
+======================================================================
+
+Representative sequences of metabarcoding features (OTUs/ASVs) and their taxonomy (and other information, such as read counts) per sample 
 can be uploaded to `PlutoF <https://plutof.ut.ee/en>`_. 
-Then each ASV/OTU is tied to a specific sample (Material Sample ID)
+Then each feature is tied to a specific sample (Material Sample ID)
 that connects the sequence data to where and when it was collected, which enhances data reuse and downstream data sharing.
 
 
@@ -375,25 +389,25 @@ Select required filelds (minimum **Project**, **Type**, and **ID**)
 
 Fill in the template file with the representative sequences of ASVs/OTUs per sample.
 
-+--------------------------------------+----------------------------------------+
-| Field                                | Description                            |
-+======================================+========================================+
-| Linked to.Project                    | project name in PlutoF                 |
-+--------------------------------------+----------------------------------------+
-| Linked to.Type                       | here the type is **materialsample**    |
-+--------------------------------------+----------------------------------------+
-| Linked to.ID                         | Material Sample ID                     |
-+--------------------------------------+----------------------------------------+
-| Sequence ID                          | Your ASV/OTU Sequence ID               |
-+--------------------------------------+----------------------------------------+
-| Sequence                             | Your ASV/OTU Sequence                  |
-+--------------------------------------+----------------------------------------+
-| Read count.Value                     | Read count of the ASV/OTU              |
-+--------------------------------------+----------------------------------------+
-| Sampling event.Sampling area.Country | Country where the sample was collected |
-+--------------------------------------+----------------------------------------+
-| Determination.Taxon name             | Assigned taxonomy of the ASV/OTU       |
-+--------------------------------------+----------------------------------------+
++--------------------------------------+--------------------------------------------+
+| Field                                | Description                                |
++======================================+============================================+
+| Linked to.Project                    | project name in PlutoF                     |
++--------------------------------------+--------------------------------------------+
+| Linked to.Type                       | here the type is **materialsample**        |
++--------------------------------------+--------------------------------------------+
+| Linked to.ID                         | Material Sample ID                         |
++--------------------------------------+--------------------------------------------+
+| Sequence ID                          | Feature (ASV/OTU) Sequence ID              |
++--------------------------------------+--------------------------------------------+
+| Sequence                             | Feature (ASV/OTU) Sequence                 |
++--------------------------------------+--------------------------------------------+
+| Read count.Value                     | Read count of the feature (ASV/OTU)        |
++--------------------------------------+--------------------------------------------+
+| Sampling event.Sampling area.Country | Country where the sample was collected     |
++--------------------------------------+--------------------------------------------+
+| Determination.Taxon name             | Assigned taxonomy of the feature (ASV/OTU) |
++--------------------------------------+--------------------------------------------+
 
 *Click on the image below to enlarge the example of a filled sequence template (for one sample).*
 
@@ -447,7 +461,7 @@ Once the template file is filled, it can be uploaded to PlutoF via the **Import 
 
 | 
 
-After clicking the **Save and start**  button, the interactive import process will begin and guide the user through the procedure.
+After clicking the ``Save and start``  button, the interactive import process will begin and guide the user through the procedure.
 You will be notified if any **errors** occur during the import process.
 
 The likely case is you need to fix the **synonyms**. This can be done interactively (see below image). When edited,
@@ -459,7 +473,7 @@ then press **Save and continue** to proceed with the import process.
 
 | 
 
-When the import is complete, you may press the **Back** button. 
+When the import is complete, you may press the ``Back`` button. 
 
 .. figure:: _static/plutof/import_complete.png
   :width: 700
@@ -476,6 +490,112 @@ When the import is complete, you may press the **Back** button.
   :width: 700
   :align: center
 
+|
+
+__________________________________________________
+
+
+.. _publish_sequences_in_gbif:
+
+Publishing metabarcoding features in GBIF
+=========================================
+
+Submitting metabarcoding biodiversity data to `GBIF <https://www.gbif.org/>`_ makes it
+**publicly discoverable and reusable** (the data becomes citable with a DOI). 
+GBIF does not store sequence reads (those belong in repositories like ENA for raw data, and ASV/OTU representative sequences to PlutoF). 
+Instead, GBIF hosts **taxonomy assignments** (taxonomic name for an ASV/OTU) and **sampling event metadata** (location, time, etc).
+
+
+Herein, the **prerequisite** for publishing metabarcoding features (ASVs/OTUs) in GBIF is to have 
+the representative sequences uploaded to PlutoF (*see section* :ref:`upload_sequences_to_plutof`).
+
+
+Steps to publish in metabarcoding biodiversity data in GBIF through PlutoF:
+
+**1. Create a new GBIF dataset in PlutoF.**
+
+.. figure:: _static/plutof/new_gbif_dataset.png
+  :width: 690
+  :align: center
+
+|
+
+.. admonition:: Choosing the license
+
+  When creating a new GBIF dataset, you need to choose a license.
+  The license can be chosen from the following options:
+
+  1. **CC0** - choose when you want to share the data **without any restrictions**.
+  
+  2. **CC-BY** - choose when you want to share the data with **attribution to the original authors**.
+  
+  3. **CC-BY-NC** - choose when you want to share the data with **attribution to the original authors**, but **not for commercial use**.
+
+
+**2. Fill the and save the new GBIF dataset form.** 
+
+.. figure:: _static/plutof/fill_gbif_form.png
+  :width: 690
+  :align: center
+
+|
+
+   
+**3. Search for your Sequences (metabarcoding features) in PlutoF, and send them to the clipboard.**
+
+.. figure:: _static/plutof/send_to_clipboard2.png
+  :width: 690
+  :align: center
+
+|
+
+**4. Got to Clipboard & Export panel, and click on "Sequences"**
+
+.. figure:: _static/plutof/clipboard_seqs.png
+  :width: 690
+  :align: center
+
+|
+
+**5. Select all (or some) sequences --> GBIF Publishing --> Append/Overwrite --> Specify GBIF dataset**
+
+.. figure:: _static/plutof/gbif_publishing.png
+  :width: 690
+  :align: center
+
+|
+
+
+**6. Go back to Publishing panel --> GBIF Datasets.** 
+
+Before publishing, **check the dataset** that is subjected to publishing in GBIF. 
+
+- Press in the button ``Generate DwCA`` to generate the Darwin Core Archive (DwCA) file.
+- Download the DwCA file *(History panel within current GBIF dataset)*.
+- Check if all looks good.
+
+.. figure:: _static/plutof/DcWA.png
+  :width: 690
+  :align: center
+
+|
+
+If everything looks good, press in the button ``Publish to GBIF``.
+
+.. figure:: _static/plutof/publish_to_gbif.png
+  :width: 200
+  :align: center
+
+|
+
+
+In `GBIF <https://www.gbif.org/>`_, you can access your dataset can be accessed via the **DATASETS** panel. 
+
+.. figure:: _static/plutof/gbif_datasets.png
+  :width: 690
+  :align: center
+
+|
 
 ____________________________________________________
 
