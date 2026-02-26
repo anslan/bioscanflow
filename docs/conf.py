@@ -18,8 +18,8 @@ if os.environ.get("READTHEDOCS", "") == "True":
 # -- Project information -----------------------------------------------------
 
 project = 'bioscanflow'
-copyright = """:Citation: Anslan, Sten, Marius Eisele, Laura Najera Cortazar, 
-                Yurena Arjona, Verissomo Joana
+copyright = """:Citation: Sten Anslan, Marius Eisele, Laura Najera-Cortazar, 
+                Yurena Arjona, Joana Verissomo
                 & Biodiversity Genomics Europe consortium. 
                 Bioscanflow: v1.1. 
                 Zenodo, February 26, 2026. https://doi.org/10.5281/zenodo.18788870."""
