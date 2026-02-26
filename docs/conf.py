@@ -18,11 +18,11 @@ if os.environ.get("READTHEDOCS", "") == "True":
 # -- Project information -----------------------------------------------------
 
 project = 'bioscanflow'
-copyright = '2026, Sten Anslan, Laura Najera-Cortazar, Marius Eisele, Yurena Arjona Fariña'
-author = 'Sten Anslan, Laura Najera-Cortazar, Marius Eisele, Yurena Arjona Fariña'
+copyright = '2026, Sten Anslan, Laura Najera-Cortazar, Marius Eisele, Yurena Arjona Farina'
+author = 'Sten Anslan, Laura Najera-Cortazar, Marius Eisele, Yurena Arjona Farina'
 
 # The full version, including alpha/beta/rc tags
-version = 'v1.0'
+version = 'v1.1'
 release = version
 
 # -- General configuration ---------------------------------------------------
