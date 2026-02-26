@@ -26,9 +26,9 @@ For MacOS: git --version (it will prompt the install)
 **2. Download github repository**
 ```bash
 cd C:/Users/user/Desktop  # go to directory where you want to place the github repo
-git clone https://github.com/anslan/BGE_biomonitoring_wf.git
+git clone https://github.com/anslan/bioscanflow.git
 
-cd C:/Users/user/Desktop/BGE_biomonitoring_wf/docs  # go to downloaded github repo
+cd C:/Users/user/Desktop/bioscanflow/docs  # go to downloaded github repo
 git checkout develop # Switch to the develop branch!
 ```
 
@@ -42,13 +42,13 @@ git checkout develop # Switch to the develop branch!
 
 
    ### If you have problems installing as an admin then try:
-   cd C:/Users/user/Desktop/BGE_biomonitoring_wf/docs  # go to github repo
+   cd C:/Users/user/Desktop/bioscanflow/docs  # go to github repo
    python -m pip install --user sphinx
    python -m pip install --user -r requirements.txt
    ```
 
 **4. Build local page for testing**
-*(in BGE_biomonitoring_wf/docs)*
+*(in bioscanflow/docs)*
 
 For Windows:
 ```bash
@@ -70,7 +70,7 @@ For Linux and macOS:
 make html
 ```
 
-Open any html file in the "BGE_biomonitoring_wf/docs/_build/html" directory to check the page build.
+Open any html file in the "bioscanflow/docs/_build/html" directory to check the page build.
 
 **6.** Edit the *.rst files as needed. Then build locally (point 4 above) to check the page before pushing. 
 
