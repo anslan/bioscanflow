@@ -402,11 +402,11 @@ Fill in the template file with the representative sequences of ASVs/OTUs per sam
 +--------------------------------------+--------------------------------------------+
 | Sequence                             | Feature (ASV/OTU) Sequence                 |
 +--------------------------------------+--------------------------------------------+
-| Read count.Value                     | Read count of the feature (ASV/OTU)        |
-+--------------------------------------+--------------------------------------------+
 | Sampling event.Sampling area.Country | Country where the sample was collected     |
 +--------------------------------------+--------------------------------------------+
 | Determination.Taxon name             | Assigned taxonomy of the feature (ASV/OTU) |
++--------------------------------------+--------------------------------------------+
+| Read count.Value                     | Read count of the feature (ASV/OTU)        |
 +--------------------------------------+--------------------------------------------+
 
 *Click on the image below to enlarge the example of a filled sequence template (for one sample).*
