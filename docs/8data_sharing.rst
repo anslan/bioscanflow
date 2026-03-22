@@ -415,6 +415,11 @@ Fill in the template file with the representative sequences of ASVs/OTUs per sam
   :width: 690
   :align: center
 
+.. note::
+  
+  Leave the column ``Sampling event.Sampling area.Country`` **empty** to 
+  automatically associate the sequence with the sample coordinates in PlutoF. 
+
 __________________________________________________
 
 .. _upload_sequence_template_file:
@@ -431,6 +436,7 @@ Once the template file is filled, it can be uploaded to PlutoF via the **Import 
   :align: center
 
 |
+
 
 **Upload** the filled template file, 
 
