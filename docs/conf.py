@@ -44,6 +44,13 @@ exclude_patterns = ['_build', '_local_docs']
 
 # -- Options for HTML output -------------------------------------------------
 
+html_title = "bioscanflow – metabarcoding workflow documentation"
+html_short_title = "bioscanflow"
+
+if os.environ.get("READTHEDOCS", "") == "True":
+    rtd_version = os.environ.get("READTHEDOCS_VERSION", "stable")
+    html_baseurl = f"https://bioscanflow.readthedocs.io/en/{rtd_version}/"
+
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 html_theme = 'sphinx_rtd_theme'

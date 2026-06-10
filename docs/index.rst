@@ -1,3 +1,7 @@
+.. meta::
+   :description: Documentation for bioscanflow metabarcoding workflows: sampling, bioinformatics, and data sharing for biodiversity biomonitoring within Biodiversity Genomics Europe (BGE).
+   :keywords: bioscanflow, metabarcoding, eDNA, biodiversity genomics, biomonitoring, bioinformatics
+
 .. |logo_BGE_alpha| image:: _static/logo_BGE_alpha.png
   :width: 300
   :alt: Alternative text
